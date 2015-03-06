@@ -8,14 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+
+typedef void (^ianScrollViewSelectBlock)(NSInteger);
 @interface IanScrollView : UIView<UIScrollViewDelegate>
 
-@property (strong,nonatomic)NSMutableArray *slideImagesArray;
-@property (strong,nonatomic)UIScrollView *scrollView;
-@property (strong,nonatomic)UIPageControl *pageControl;
-@property (strong, nonatomic)UITextField *text;
-
-
+@property (nonatomic, strong) NSMutableArray *slideImagesArray;
+@property (nonatomic, copy) ianScrollViewSelectBlock ianEcrollViewSelectAction;
+@property (nonatomic) BOOL withoutPageControl;
 
 - (void)startLoading; //加载初始化（必须实现）
 @end

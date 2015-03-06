@@ -22,6 +22,12 @@
         [array addObject:[NSString stringWithFormat:@"http://childmusic.qiniudn.com/huandeng/%ld.png", (long)i]];
     }
     scrollView.slideImagesArray = array;
+    scrollView.withoutPageControl = NO;
+    scrollView.ianEcrollViewSelectAction = ^(NSInteger i){
+    
+        NSLog(@"点击了%ld张图片",(long)i);
+    
+    };
     
     NSLog(@"%@",scrollView.slideImagesArray);
     [scrollView startLoading];

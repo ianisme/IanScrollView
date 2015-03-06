@@ -15,6 +15,7 @@
 		3CE8AF791AA978AF000CEECF /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE8AF781AA978AF000CEECF /* RootViewController.m */; };
 		3CE8AF7C1AA978DB000CEECF /* IanScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE8AF7B1AA978DB000CEECF /* IanScrollView.m */; };
 		3CE8AF821AA982F8000CEECF /* IanScrollViewDefault@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CE8AF811AA982F8000CEECF /* IanScrollViewDefault@2x.png */; };
+		3CE8AF851AA9A670000CEECF /* IanScrollImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE8AF841AA9A670000CEECF /* IanScrollImageView.m */; };
 		BB92D5D6D0F819047B39C227 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B04C893C1DA2F0D0C1501553 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,8 @@
 		3CE8AF7A1AA978DB000CEECF /* IanScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IanScrollView.h; path = ../IanScrollView.h; sourceTree = "<group>"; };
 		3CE8AF7B1AA978DB000CEECF /* IanScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IanScrollView.m; path = ../IanScrollView.m; sourceTree = "<group>"; };
 		3CE8AF811AA982F8000CEECF /* IanScrollViewDefault@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IanScrollViewDefault@2x.png"; sourceTree = "<group>"; };
+		3CE8AF831AA9A670000CEECF /* IanScrollImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IanScrollImageView.h; sourceTree = "<group>"; };
+		3CE8AF841AA9A670000CEECF /* IanScrollImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IanScrollImageView.m; sourceTree = "<group>"; };
 		8E41303CB67B1839393968F3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B04C893C1DA2F0D0C1501553 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D85259C6DF410F17C0B995B5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -143,6 +146,8 @@
 			children = (
 				3CE8AF7A1AA978DB000CEECF /* IanScrollView.h */,
 				3CE8AF7B1AA978DB000CEECF /* IanScrollView.m */,
+				3CE8AF831AA9A670000CEECF /* IanScrollImageView.h */,
+				3CE8AF841AA9A670000CEECF /* IanScrollImageView.m */,
 				3CE8AF811AA982F8000CEECF /* IanScrollViewDefault@2x.png */,
 			);
 			path = IanScrollViewLib;
@@ -291,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CE8AF851AA9A670000CEECF /* IanScrollImageView.m in Sources */,
 				3CE8AF7C1AA978DB000CEECF /* IanScrollView.m in Sources */,
 				3CE8AF571AA975EA000CEECF /* AppDelegate.m in Sources */,
 				3CE8AF541AA975EA000CEECF /* main.m in Sources */,
