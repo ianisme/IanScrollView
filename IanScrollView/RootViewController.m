@@ -16,18 +16,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    IanScrollView *scrollView = [[IanScrollView alloc] initWithFrame:CGRectMake(0, 100, 320, 130)];
+    IanScrollView *scrollView = [[IanScrollView alloc] initWithFrame:CGRectMake(0, 20, 320, 130)];
     NSMutableArray *array = [NSMutableArray array];
     for (NSInteger i = 1; i < 7; i ++) {
         [array addObject:[NSString stringWithFormat:@"http://childmusic.qiniudn.com/huandeng/%ld.png", (long)i]];
     }
     scrollView.slideImagesArray = array;
-    scrollView.withoutPageControl = NO;
     scrollView.ianEcrollViewSelectAction = ^(NSInteger i){
     
         NSLog(@"点击了%ld张图片",(long)i);
     
     };
+    scrollView.PageControlPageIndicatorTintColor = [UIColor colorWithRed:255/255.0f green:244/255.0f blue:227/255.0f alpha:1];
+    scrollView.pageControlCurrentPageIndicatorTintColor = [UIColor colorWithRed:67/255.0f green:174/255.0f blue:168/255.0f alpha:1];
+    scrollView.autoTime = [NSNumber numberWithFloat:4.0f];
     NSLog(@"%@",scrollView.slideImagesArray);
     [scrollView startLoading];
     [self.view addSubview:scrollView];

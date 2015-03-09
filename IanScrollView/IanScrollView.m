@@ -71,7 +71,6 @@
 {
     NSInteger page = self.pageControl.currentPage;
     page ++;
-    self.pageControl.currentPage = page;
     [self turnPage:page];
 }
 
