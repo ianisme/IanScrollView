@@ -11,7 +11,9 @@
 #import "IanScrollImageView.h"
 
 @interface IanScrollView()
-
+{
+    NSInteger _tempPage;
+}
 @property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, strong) UIPageControl *pageControl;
 @end
@@ -45,10 +47,22 @@
     }
 }
 
-#pragma mark -PageControl Method-
-- (void)turnPage
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
 {
-    NSInteger page = self.pageControl.currentPage;
+    if (!self.withoutAutoScroll){
+        if (_tempPage == 0) {
+            [self.scrollView scrollRectToVisible:CGRectMake(_scrollView.frame.size.width * _slideImagesArray.count, 0, _scrollView.frame.size.width, _scrollView.frame.size.height) animated:NO];
+        }else if(_tempPage == _slideImagesArray.count){
+            [self.scrollView scrollRectToVisible:CGRectMake(_scrollView.frame.size.width, 0, _scrollView.frame.size.width,_scrollView.frame.size.height) animated:NO
+             ];
+        }
+    }
+}
+
+#pragma mark -PageControl Method-
+- (void)turnPage:(NSInteger)page
+{
+    _tempPage = page;
     [self.scrollView scrollRectToVisible:CGRectMake(_scrollView.frame.size.width * (page + 1), 0, _scrollView.frame.size.width, _scrollView.frame.size.height) animated:YES];
 }
 
@@ -57,9 +71,8 @@
 {
     NSInteger page = self.pageControl.currentPage;
     page ++;
-    page = page >= self.slideImagesArray.count ? 0 : page;
     self.pageControl.currentPage = page;
-    [self turnPage];
+    [self turnPage:page];
 }
 
 
@@ -94,7 +107,6 @@
             if(self.slideImagesArray.count < 2){
                 pageControl.hidden = YES;
             }
-            [pageControl addTarget:self action:@selector(turnPage) forControlEvents:UIControlEventValueChanged];
             [self addSubview:pageControl];
             pageControl;
         });
@@ -122,9 +134,14 @@
     [_scrollView setContentOffset:CGPointMake(0, 0)];
     [_scrollView scrollRectToVisible:CGRectMake(_scrollView.frame.size.width, 0, _scrollView.frame.size.width, _scrollView.frame.size.height) animated:NO];
 
-    NSTimer *myTimer = [NSTimer  timerWithTimeInterval:1.0 target:self selector:@selector(runTimePage)userInfo:nil repeats:YES];
-    
-    [[NSRunLoop  currentRunLoop] addTimer:myTimer forMode:NSDefaultRunLoopMode];
+    if (!self.withoutAutoScroll) {
+        if (!self.autoTime) {
+            self.autoTime = [NSNumber numberWithFloat:2.0f];
+        }
+        NSTimer *myTimer = [NSTimer timerWithTimeInterval:[self.autoTime floatValue] target:self selector:@selector(runTimePage)userInfo:nil repeats:YES];
+        
+        [[NSRunLoop  currentRunLoop] addTimer:myTimer forMode:NSDefaultRunLoopMode];
+    }
 }
 - (void)ImageClick:(UIImageView *)sender
 {

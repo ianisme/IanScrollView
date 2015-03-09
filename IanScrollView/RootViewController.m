@@ -28,7 +28,6 @@
         NSLog(@"点击了%ld张图片",(long)i);
     
     };
-    
     NSLog(@"%@",scrollView.slideImagesArray);
     [scrollView startLoading];
     [self.view addSubview:scrollView];

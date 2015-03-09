@@ -12,9 +12,11 @@
 typedef void (^ianScrollViewSelectBlock)(NSInteger);
 @interface IanScrollView : UIView<UIScrollViewDelegate>
 
-@property (nonatomic, strong) NSMutableArray *slideImagesArray;
-@property (nonatomic, copy) ianScrollViewSelectBlock ianEcrollViewSelectAction;
-@property (nonatomic) BOOL withoutPageControl;
+@property (nonatomic, strong) NSMutableArray *slideImagesArray; //存储图片的地址
+@property (nonatomic, copy) ianScrollViewSelectBlock ianEcrollViewSelectAction; // 图片点击事件
+@property (nonatomic) BOOL withoutPageControl; // 是否显示pageControl
+@property (nonatomic) BOOL withoutAutoScroll; // 是否自动滚动
+@property (nonatomic) NSNumber *autoTime; //滚动时间
 
 - (void)startLoading; //加载初始化（必须实现）
 @end
