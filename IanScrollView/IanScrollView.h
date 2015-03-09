@@ -17,6 +17,8 @@ typedef void (^ianScrollViewSelectBlock)(NSInteger);
 @property (nonatomic) BOOL withoutPageControl; // 是否显示pageControl
 @property (nonatomic) BOOL withoutAutoScroll; // 是否自动滚动
 @property (nonatomic) NSNumber *autoTime; //滚动时间
+@property (nonatomic, strong) UIColor *pageControlCurrentPageIndicatorTintColor;
+@property (nonatomic, strong) UIColor *PageControlPageIndicatorTintColor;
 
 - (void)startLoading; //加载初始化（必须实现）
 @end
