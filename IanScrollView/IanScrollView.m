@@ -145,7 +145,9 @@
 }
 - (void)ImageClick:(UIImageView *)sender
 {
-    self.ianEcrollViewSelectAction(sender.tag);
+    if (self.ianEcrollViewSelectAction) {
+         self.ianEcrollViewSelectAction(sender.tag);
+    }
 }
 
 @end
