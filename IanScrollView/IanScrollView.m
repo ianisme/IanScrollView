@@ -25,6 +25,12 @@
     [self _initScrollView];
 }
 
+- (void)startLoadingByIndex:(NSInteger)index
+{
+    [self startLoading];
+    _tempPage = index;
+    [self.scrollView scrollRectToVisible:CGRectMake(_scrollView.frame.size.width * (index + 1), 0, _scrollView.frame.size.width, _scrollView.frame.size.height) animated:YES];
+}
 
 #pragma mark -scrollView Delegate-
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
