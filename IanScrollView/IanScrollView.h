@@ -10,10 +10,12 @@
 
 
 typedef void (^ianScrollViewSelectBlock)(NSInteger);
+typedef void (^ianScrollViewCurrentIndex)(NSInteger);
 @interface IanScrollView : UIView<UIScrollViewDelegate>
 
 @property (nonatomic, strong) NSMutableArray *slideImagesArray; //存储图片的地址
 @property (nonatomic, copy) ianScrollViewSelectBlock ianEcrollViewSelectAction; // 图片点击事件
+@property (nonatomic, copy) ianScrollViewCurrentIndex ianCurrentIndex;// 此时的幻灯片图片序号
 @property (nonatomic) BOOL withoutPageControl; // 是否显示pageControl
 @property (nonatomic) BOOL withoutAutoScroll; // 是否自动滚动
 @property (nonatomic) NSNumber *autoTime; //滚动时间
