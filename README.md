@@ -1,5 +1,4 @@
-1.本库实现了炫酷的菜单选择功能
-2.接口代码：
+1.接口代码：
 @property (nonatomic, strong) NSMutableArray *slideImagesArray; // 存储图片的地址
 @property (nonatomic, copy) ianScrollViewSelectBlock ianEcrollViewSelectAction; // 图片点击事件
 @property (nonatomic, copy) ianScrollViewCurrentIndex ianCurrentIndex;// 此时的幻灯片图片序号
