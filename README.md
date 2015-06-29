@@ -9,5 +9,5 @@
 <p>@property (nonatomic, strong) UIColor *PageControlPageIndicatorTintColor;</p>
 <p>- (void)startLoading; // 加载初始化（必须实现）</p>
 
-<p>// 或者</p>
+<p>// 或者 </p>
 <p>- (void)startLoadingByIndex:(NSInteger)index; // 加载初始化并制定初始图片</p>
