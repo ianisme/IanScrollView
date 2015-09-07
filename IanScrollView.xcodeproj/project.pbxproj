@@ -419,10 +419,12 @@
 			baseConfigurationReference = 8E41303CB67B1839393968F3 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yin Qu (9H65BLS4K7)";
 				INFOPLIST_FILE = IanScrollView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "05a6647e-c7ca-40d7-a3cf-c8eb7a9111a9";
 			};
 			name = Debug;
 		};
@@ -435,6 +437,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "05a6647e-c7ca-40d7-a3cf-c8eb7a9111a9";
 			};
 			name = Release;
 		};
