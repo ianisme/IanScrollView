@@ -1,5 +1,6 @@
+<img src="https://coding.net/u/ianisme/p/IanScrollView/git/raw/master/Demo.gif"  alt="效果展示by ian" style="width:320px;height:568px;"/>
+
 接口代码：
-。
 <p>@property (nonatomic, strong) NSMutableArray *slideImagesArray; // 存储图片的地址</p>
 <p>@property (nonatomic, copy) ianScrollViewSelectBlock ianEcrollViewSelectAction; // 图片点击事件</p>
 <p>@property (nonatomic, copy) ianScrollViewCurrentIndex ianCurrentIndex;// 此时的幻灯片图片序号</p>
