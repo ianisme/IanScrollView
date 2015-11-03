@@ -1,6 +1,6 @@
 ### 说明：
 - https://github.com/ianisme/IanScrollView
-- 这是利用UIScrollView实现的图片无限循环滚动效果，在很多应用上都很常见。
+- 这是利用UIScrollView实现的图片无限循环滚动的效果，在很多应用上都很常见。
 
 ### 功能如下：
 
