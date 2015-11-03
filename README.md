@@ -8,7 +8,7 @@
 - 2.图片可以点击
 - 3.控制是否显示pageControl
 - 4.控制是否自动滚动
-- 5.可以设置滚动时间
+- 5.设置滚动时间
 
 ### 效果演示：
 <img src="https://coding.net/u/ianisme/p/IanScrollView/git/raw/master/Demo.gif"  alt="效果展示by ian" height="568" width="320" />
