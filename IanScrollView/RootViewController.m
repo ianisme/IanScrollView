@@ -36,6 +36,8 @@
     NSLog(@"%@",scrollView.slideImagesArray);
     [scrollView startLoading];
     [self.view addSubview:scrollView];
+    
+
     // Do any additional setup after loading the view.
 }
 
